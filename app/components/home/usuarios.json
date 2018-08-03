@@ -1,0 +1,30 @@
+
+{
+    "users": {
+        "maria": {
+            "datosPersonales": {
+                "NHC": 21312313,
+                "Nombre": "Maria",
+                "primerApellido": "Gonzalez",
+                "segundoApellido": "Martinez",
+                "Genero": "Mujer",
+                "fechaNacimiento": 19921011,
+                "nifoPasaporte": "44892390R"
+            },
+            "direccion": {
+                "Calle": "calle Linares",
+                "Numero": 32,
+                "Puerta": 7,
+                "codigoPostal": 46018,
+                "ciudad": "valencia"
+            },
+            "listadoAseguradora": {
+                "nombreAseguradora": 323232,
+                "TipoSeguro": "familiar",
+                "numeroTarjeta": 1231231389798
+            }
+        }
+    }
+}
+
+

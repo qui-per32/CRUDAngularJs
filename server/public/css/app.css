@@ -1,0 +1,33 @@
+.logo {
+    height: 50px;
+    width: 50px;
+}
+
+.col-12{
+    padding: 0px!important;
+}
+
+.newUser{
+    margin-bottom: 15px;
+}
+
+.header{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.titleCard {
+    margin-top: 10px;
+}
+
+.headerApp{
+    height: 10vh;
+}
+
+.footerApp {
+    height: 10vh;
+}
+
+.bodyApp {
+    height: 80vh;
+}

@@ -1,9 +1,10 @@
 import controller from './home.controller'
 
 export const HomeComponent = {
-    bindings:{
-        dataResult: '<'
-    },
+   bindings: {
+           dataResult: '<'
+       },
+       controller,
     template: ` 
     <div class="container-fluid bodyApp">
         <div class="row">
@@ -12,13 +13,13 @@ export const HomeComponent = {
                     <div class="card-body">
                         <div class="row">
                             <div class=" offset-2 col-2 border-right">
-                                <h4>Users</h4>
+                                <h4>Usuarios</h4>
                             </div>
                             <div class="col-2">
-                                <button type="button" class="btn btn-sm btn-primary"><a ui-sref="create" class="nav-link text-white">Add User</a></button>
+                                <button type="button" class="btn btn-sm btn-primary"><a ui-sref="create" class="nav-link text-white">Nuevo usuario</a></button>
                             </div>
                             <div class="col-2">
-                                <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#borrarMedicos"><a  class="nav-link text-white">Delete Doctors</a></button>
+                                <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#borrarMedicos"><a  class="nav-link text-white">Borrar médicos</a></button>
                             </div>
                             <div class="modal fade" id="borrarMedicos" tabindex="-1" role="dialog" aria-labelledby="borrarMedicosTitle" aria-hidden="true">
                                                     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -52,18 +53,14 @@ export const HomeComponent = {
                                     <thead class="bg-light">
                                         <tr>
                                             <th>
-                                                <div class="form-check-inline">
-                                                    <label class="form-check-label">
-                                                        <input type="checkbox" class="form-check-input" value="">
-                                                    </label>
-                                                </div>
+                                            
                                             </th>
-                                            <th>Name</th>
-                                            <th>Edit</th>
+                                            <th>Nombre</th>
+                                            <th>Editar</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr ng-repeat="resultado in $ctrl.dataResult" data="resultado">
+                                        <tr>
                                             <td>
                                                 <div class="form-check-inline">
                                                     <label class="form-check-label">
@@ -72,7 +69,7 @@ export const HomeComponent = {
                                                 </div>
                                             </td>
                                             <td>
-                                                <p>doe</p>
+                                                <p>{{$ctrl.dataResult.name}}</p>
                                             </td>
                                             <td>
                                                 <a href="#">

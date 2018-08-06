@@ -5,11 +5,13 @@ class HomeController {
     }
 
     getData() {
-        console.log("Entra en JSON");
-         this.homeService.getData()
+        console.log("Entra en getdata");
+        this.homeService.getData()
             .then(resultado => {
+                console.log(resultado);
+                
                 this.dataResult = resultado;
-               // console.log(JSON.stringify(this.dataResult));
+                console.log(JSON.stringify(this.dataResult));
             });
     }
 }

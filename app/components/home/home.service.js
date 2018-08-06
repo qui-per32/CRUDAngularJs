@@ -1,17 +1,10 @@
 export default class homeService {
     constructor($http) {
-        this.$http = $http;
+       this.$http = $http;
     }
 
     getData() {
-        return this.$http.get('./usuarios.json')
-            .then((data) =>{ 
-                console.log(data);
-                return data;
-            })
-            
+        return this.$http.get('/json/usuarios.json')
+            .then(response => response.data)
     }
-
-
-
 }

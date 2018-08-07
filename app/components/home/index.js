@@ -1,5 +1,6 @@
 import angular from 'angular';
-import HomeService from './home.service';
+import DataService from './data.service';
+import HomeController from './home/home.controller';
 import {HomeComponent} from "./home/home.component";
 import {CreateUserComponent} from "../create/createUser.component";
 import {ViewComponent} from "../view/view.component";
@@ -15,7 +16,8 @@ const home = angular
     .component('view', ViewComponent)
     .component('edit', EditComponent)
     .component ('error', ErrorComponent)
-    .service('homeService', HomeService)
+    .service('dataService', DataService)
+    .controller('homeController', HomeController)
     .config(($stateProvider, $urlRouterProvider)=>{
     $stateProvider
         .state('create', {
@@ -27,7 +29,7 @@ const home = angular
             component:'edit'
         })
         .state('view', {
-            url: '/view',
+            url: '/view/:userID',
             component: 'view'
         })
         .state('profesionales', {

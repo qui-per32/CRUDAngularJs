@@ -1,8 +1,14 @@
+import controller from './view.controller'
+
 export const ViewComponent = {
+     bindings: {
+         dataResult: '<'
+       },
+    controller,
     template: ` 
     <div class="container-fluid">
     <div class="row justify-content-center">
-    <div class="col-6">
+    <div class="col-6>
       <div class="card mt-3 tab-card">
         <div class="card-header tab-card-header">
           <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
@@ -22,67 +28,67 @@ export const ViewComponent = {
           <div class="tab-pane fade show active p-3" id="one" role="tabpanel" aria-labelledby="one-tab">
             <h5 class="card-title"><u>NHC</u></h5>
             <ul class="list-group">
-              <li class="list-group-item">123123132</li>
+              <li class="list-group-item">{{$ctrl.dataResult.NHC}}</li>
             </ul>
              <h5 class="card-title titleCard"><u>Nombre</u></h5>
             <ul class="list-group">
-              <li class="list-group-item">Maria</li>
+              <li class="list-group-item">{{$ctrl.dataResult.nombre}}</li>
             </ul>              
              <h5 class="card-title titleCard"><u>Primer Apellido</u></h5>
             <ul class="list-group">
-              <li class="list-group-item">Perez</li>
+              <li class="list-group-item">{{$ctrl.dataResult.primerApellido}}</li>
             </ul>
              <h5 class="card-title titleCard"><u>Segundo Apellido</u></h5>
             <ul class="list-group">
-              <li class="list-group-item">Gonzalez</li>
+              <li class="list-group-item">{{$ctrl.dataResult.segundoApellido}}</li>
             </ul>
              <h5 class="card-title titleCard"><u>Genero</u></h5>
             <ul class="list-group">
-              <li class="list-group-item">Mujer</li>
+              <li class="list-group-item">{{$ctrl.dataResult.genero}}</li>
             </ul>
             <h5 class="card-title titleCard"><u>Fecha de Nacimiento</u></h5>
             <ul class="list-group">
-              <li class="list-group-item">11/10/1992</li>
+              <li class="list-group-item">{{$ctrl.dataResult.fechaNacimiento}}</li>
             </ul>
             <h5 class="card-title titleCard"><u>NIF o Pasaporte</u></h5>
             <ul class="list-group">
-              <li class="list-group-item">44892390R</li>
+              <li class="list-group-item">{{$ctrl.dataResult.nifoPasaporte}}</li>
             </ul>
           </div>
           <div class="tab-pane fade p-3" id="two" role="tabpanel" aria-labelledby="two-tab">
             <h5 class="card-title"><u>Calle</u></h5>
             <ul class="list-group">
-              <li class="list-group-item">Avenida del Cid</li>
+              <li class="list-group-item">{{$ctrl.dataResult.calle}}</li>
             </ul>
              <h5 class="card-title titleCard"><u>Numero</u></h5>
             <ul class="list-group">
-              <li class="list-group-item">32</li>
+              <li class="list-group-item">{{$ctrl.dataResult.numero}}</li>
             </ul>              
              <h5 class="card-title titleCard"><u>Puerta</u></h5>
             <ul class="list-group">
-              <li class="list-group-item">7</li>
+              <li class="list-group-item">{{$ctrl.dataResult.puerta}}</li>
             </ul>
              <h5 class="card-title titleCard"><u>Código postal</u></h5>
             <ul class="list-group">
-              <li class="list-group-item">46018</li>
+              <li class="list-group-item">{{$ctrl.dataResult.codigoPostal}}</li>
             </ul>
              <h5 class="card-title titleCard"><u>Ciudad</u></h5>
             <ul class="list-group">
-              <li class="list-group-item">Valencia</li>
+              <li class="list-group-item">{{$ctrl.dataResult.ciudad}}</li>
             </ul>              
           </div>
           <div class="tab-pane fade p-3" id="three" role="tabpanel" aria-labelledby="three-tab">
             <h5 class="card-title"><u>Nombre aseguradora</u></h5>
             <ul class="list-group">
-              <li class="list-group-item">sanitas</li>
+              <li class="list-group-item">{{$ctrl.dataResult.nombreAseguradora}}</li>
             </ul>
              <h5 class="card-title titleCard"><u>Tipo de seguro(salud,familiar,dental...)</u></h5>
             <ul class="list-group">
-              <li class="list-group-item">Familiar</li>
+              <li class="list-group-item">{{$ctrl.dataResult.tipoSeguro}}</li>
             </ul>              
              <h5 class="card-title titleCard"><u>Número de la tarjeta</u></h5>
             <ul class="list-group">
-              <li class="list-group-item">555552342342</li>
+              <li class="list-group-item">{{$ctrl.dataResult.NumeroTarjeta}}</li>
             </ul>              
           </div>
 

@@ -1,18 +1,22 @@
 class HomeController {
-    constructor(homeService) {
-        this.homeService = homeService;
+    constructor(dataService) {
+        
+        this.dataService = dataService;
         this.getData();
     }
 
     getData() {
-        console.log("Entra en getdata");
-        this.homeService.getData()
-            .then(resultado => {
-                console.log(resultado);
-                
+        this.dataService.getData()
+            .then(resultado => { 
                 this.dataResult = resultado;
-                console.log(JSON.stringify(this.dataResult));
             });
+    }
+
+    deleteUser(id) {
+       if (confirm('desea borar el usuario '+ id)) {
+            this.dataService.deleteUser(id);
+       }
+        
     }
 }
 

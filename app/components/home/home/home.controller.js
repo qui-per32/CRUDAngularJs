@@ -13,9 +13,10 @@ class HomeController {
     }
 
     deleteUser(id) {
-       if (confirm('desea borar el usuario '+ id)) {
+       console.log(id);
+       
             this.dataService.deleteUser(id);
-       }
+    
         
     }
 }

@@ -15,5 +15,8 @@ export default class dataService {
     deleteUser(id){
         console.log(id);
         
+        this.data.splice(id, 1);  
+        
+              
     }
 }

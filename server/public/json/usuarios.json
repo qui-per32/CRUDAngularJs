@@ -1,5 +1,6 @@
 [{
-    "id": 1,
+    "id": 0,
+    "tipo": "paciente",
     "NHC": "132432423",
     "nombre": "maria",
     "primerApellido": "perez",
@@ -13,10 +14,11 @@
     "codigoPostal": "46018",
     "ciudad": "Valencia",
     "nombreAseguradora": "mafre",
-    "tipoSeguro": "famliar",
+    "tipoSeguro": "familiar",
     "NumeroTarjeta": "2332324234"
 }, {
-    "id": 2,
+    "id": 1,
+    "tipo": "paciente",
     "NHC": "132432423",
     "nombre": "pedro",
     "primerApellido": "martinez",
@@ -30,10 +32,11 @@
     "codigoPostal": "46018",
     "ciudad": "Valencia",
     "nombreAseguradora": "mafre",
-    "tipoSeguro": "famliar",
+    "tipoSeguro": "familiar",
     "NumeroTarjeta": "2332324234"
 }, {
-    "id": 3,
+    "id": 2,
+    "tipo": "paciente",
     "NHC": "132432423",
     "nombre": "edu",
     "primerApellido": "gomez",
@@ -47,10 +50,11 @@
     "codigoPostal": "46018",
     "ciudad": "Valencia",
     "nombreAseguradora": "mafre",
-    "tipoSeguro": "famliar",
+    "tipoSeguro": "familiar",
     "NumeroTarjeta": "2332324234"
 }, {
-    "id": 4,
+    "id": 3,
+    "tipo": "paciente",
     "NHC": "132432423",
     "nombre": "natasha",
     "primerApellido": "lopez",
@@ -64,10 +68,11 @@
     "codigoPostal": "46018",
     "ciudad": "Valencia",
     "nombreAseguradora": "mafre",
-    "tipoSeguro": "famliar",
+    "tipoSeguro": "familiar",
     "NumeroTarjeta": "2332324234"
 }, {
-    "id": 5,
+    "id": 4,
+    "tipo": "paciente",
     "NHC": "132432423",
     "nombre": "patrick",
     "primerApellido": "martinez",
@@ -84,7 +89,8 @@
     "tipoSeguro": "familiar",
     "NumeroTarjeta": "234234244665859"
 }, {
-    "id": 6,
+    "id": 5,
+    "tipo": "paciente",
     "NHC": "132432423",
     "nombre": "danik",
     "primerApellido": "ruiz",
@@ -98,10 +104,29 @@
     "codigoPostal": "46018",
     "ciudad": "Valencia",
     "nombreAseguradora": "mafre",
-    "tipoSeguro": "famliar",
+    "tipoSeguro": "familiar",
+    "NumeroTarjeta": "2332324234"
+}, {
+    "id": 6,
+    "tipo": "paciente",
+    "NHC": "132432423",
+    "nombre": "natasha",
+    "primerApellido": "lopez",
+    "segundoApellido": "zarate",
+    "genero": "mujer",
+    "fechaNacimiento": "11/10/1992",
+    "nifoPasaporte": "44892390R",
+    "calle": "avenida del Cid",
+    "numero": "32",
+    "puerta": "7",
+    "codigoPostal": "46018",
+    "ciudad": "Valencia",
+    "nombreAseguradora": "mafre",
+    "tipoSeguro": "familiar",
     "NumeroTarjeta": "2332324234"
 }, {
     "id": 7,
+    "tipo": "paciente",
     "NHC": "132432423",
     "nombre": "natasha",
     "primerApellido": "lopez",
@@ -115,10 +140,11 @@
     "codigoPostal": "46018",
     "ciudad": "Valencia",
     "nombreAseguradora": "mafre",
-    "tipoSeguro": "famliar",
+    "tipoSeguro": "familiar",
     "NumeroTarjeta": "2332324234"
 }, {
     "id": 8,
+    "tipo": "paciente",
     "NHC": "132432423",
     "nombre": "natasha",
     "primerApellido": "lopez",
@@ -132,10 +158,11 @@
     "codigoPostal": "46018",
     "ciudad": "Valencia",
     "nombreAseguradora": "mafre",
-    "tipoSeguro": "famliar",
+    "tipoSeguro": "familiar",
     "NumeroTarjeta": "2332324234"
 }, {
     "id": 9,
+    "tipo": "paciente",
     "NHC": "132432423",
     "nombre": "natasha",
     "primerApellido": "lopez",
@@ -149,10 +176,11 @@
     "codigoPostal": "46018",
     "ciudad": "Valencia",
     "nombreAseguradora": "mafre",
-    "tipoSeguro": "famliar",
+    "tipoSeguro": "familiar",
     "NumeroTarjeta": "2332324234"
 }, {
     "id": 10,
+    "tipo": "paciente",
     "NHC": "132432423",
     "nombre": "natasha",
     "primerApellido": "lopez",
@@ -166,10 +194,11 @@
     "codigoPostal": "46018",
     "ciudad": "Valencia",
     "nombreAseguradora": "mafre",
-    "tipoSeguro": "famliar",
+    "tipoSeguro": "familiar",
     "NumeroTarjeta": "2332324234"
 }, {
     "id": 11,
+    "tipo": "paciente",
     "NHC": "132432423",
     "nombre": "natasha",
     "primerApellido": "lopez",
@@ -183,10 +212,11 @@
     "codigoPostal": "46018",
     "ciudad": "Valencia",
     "nombreAseguradora": "mafre",
-    "tipoSeguro": "famliar",
+    "tipoSeguro": "familiar",
     "NumeroTarjeta": "2332324234"
 }, {
     "id": 12,
+    "tipo": "paciente",
     "NHC": "132432423",
     "nombre": "natasha",
     "primerApellido": "lopez",
@@ -200,10 +230,11 @@
     "codigoPostal": "46018",
     "ciudad": "Valencia",
     "nombreAseguradora": "mafre",
-    "tipoSeguro": "famliar",
+    "tipoSeguro": "familiar",
     "NumeroTarjeta": "2332324234"
 }, {
     "id": 13,
+    "tipo": "paciente",
     "NHC": "132432423",
     "nombre": "natasha",
     "primerApellido": "lopez",
@@ -217,10 +248,11 @@
     "codigoPostal": "46018",
     "ciudad": "Valencia",
     "nombreAseguradora": "mafre",
-    "tipoSeguro": "famliar",
+    "tipoSeguro": "familiar",
     "NumeroTarjeta": "2332324234"
 }, {
     "id": 14,
+    "tipo": "paciente",
     "NHC": "132432423",
     "nombre": "natasha",
     "primerApellido": "lopez",
@@ -234,27 +266,27 @@
     "codigoPostal": "46018",
     "ciudad": "Valencia",
     "nombreAseguradora": "mafre",
-    "tipoSeguro": "famliar",
-    "NumeroTarjeta": "2332324234"
-}, {
-    "id": 15,
-    "NHC": "132432423",
-    "nombre": "natasha",
-    "primerApellido": "lopez",
-    "segundoApellido": "zarate",
-    "genero": "mujer",
-    "fechaNacimiento": "11/10/1992",
-    "nifoPasaporte": "44892390R",
-    "calle": "avenida del Cid",
-    "numero": "32",
-    "puerta": "7",
-    "codigoPostal": "46018",
-    "ciudad": "Valencia",
-    "nombreAseguradora": "mafre",
-    "tipoSeguro": "famliar",
+    "tipoSeguro": "familiar",
     "NumeroTarjeta": "2332324234"
 },{
+    "id": 15,
+    "tipo": "profesional",
+    "numeroColegiado": 234242342,
+    "nombre": "julio",
+    "primerApellido": "melendez",
+    "segundoApellido": "olmo",
+    "genero": "hombre",
+    "fechaNacimiento": "15/5/1978",
+    "nifoPasaporte": "44893690J",
+    "tipoProfesional": "Medico",
+    "calle": "avenida del Cid",
+    "numero": "20",
+    "puerta": "14",
+    "codigoPostal": "46005",
+    "ciudad": "murcia"
+}, {
     "id": 16,
+    "tipo": "profesional",
     "numeroColegiado": 234242342,
     "nombre": "julio",
     "primerApellido": "melendez",
@@ -270,6 +302,7 @@
     "ciudad": "murcia"
 }, {
     "id": 17,
+    "tipo": "profesional",
     "numeroColegiado": 234242342,
     "nombre": "julio",
     "primerApellido": "melendez",
@@ -285,6 +318,7 @@
     "ciudad": "murcia"
 }, {
     "id": 18,
+    "tipo": "profesional",
     "numeroColegiado": 234242342,
     "nombre": "julio",
     "primerApellido": "melendez",
@@ -300,6 +334,7 @@
     "ciudad": "murcia"
 }, {
     "id": 19,
+    "tipo": "profesional",
     "numeroColegiado": 234242342,
     "nombre": "julio",
     "primerApellido": "melendez",
@@ -315,6 +350,7 @@
     "ciudad": "murcia"
 }, {
     "id": 20,
+    "tipo": "profesional",
     "numeroColegiado": 234242342,
     "nombre": "julio",
     "primerApellido": "melendez",
@@ -330,21 +366,7 @@
     "ciudad": "murcia"
 }, {
     "id": 21,
-    "numeroColegiado": 234242342,
-    "nombre": "julio",
-    "primerApellido": "melendez",
-    "segundoApellido": "olmo",
-    "genero": "hombre",
-    "fechaNacimiento": "15/5/1978",
-    "nifoPasaporte": "44893690J",
-    "tipoProfesional": "Medico",
-    "calle": "avenida del Cid",
-    "numero": "20",
-    "puerta": "14",
-    "codigoPostal": "46005",
-    "ciudad": "murcia"
-}, {
-    "id": 22,
+    "tipo": "profesional",
     "numeroColegiado": 234242342,
     "nombre": "julio",
     "primerApellido": "melendez",

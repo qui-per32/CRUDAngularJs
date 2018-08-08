@@ -7,6 +7,7 @@ export const HomeComponent = {
        controller,
     template: ` 
     <div class="container-fluid bodyApp">
+   
         <div class="row">
             <div class="col-12">
                 <div class="card">
@@ -62,7 +63,6 @@ export const HomeComponent = {
                                     <tbody>
                                         <tr ng-repeat="user in $ctrl.dataResult">
                                             <td>
-                                                <pre>{{user | json}}</pre>
                                                 <div class="form-check-inline">
                                                     <label class="form-check-label">
                                                         <input type="checkbox" class="form-check-input" value="">
@@ -73,15 +73,46 @@ export const HomeComponent = {
                                                 <p>{{user.nombre + ','+ user.primerApellido }}</p>
                                             </td>
                                             <td>
-                                                <a ui-sref="edit">
+                                                <a ng-if="user.tipo == 'profesional'" ui-sref="editProfesional({userID: user.id})">
                                                     <i class="fa fa-edit"></i>
                                                 </a>
-                                                <a ui-sref="view({userID: user.id})">
+                                                <a ng-if="user.tipo == 'paciente'" ui-sref="editPaciente({userID: user.id})">
+                                                    <i class="fa fa-edit"></i>
+                                                </a>
+                                                <a ng-if="user.tipo == 'paciente'" ui-sref="pacientes({userID: user.id})">
                                                     <i class="fa fa-eye"></i>
                                                 </a>
-                                                <button  ng-click="$ctrl.deleteUser(user.id)">
+                                                <a ng-if="user.tipo == 'profesional'" ui-sref="profesional({userID: user.id})">
+                                                    <i class="fa fa-eye"></i>
+                                                </a>
+                                                <a href="#" data-toggle="modal" data-target="#borrarUsuario{{user.id}}">
                                                     <i class="fa fa-trash"></i>
-                                                </button>
+                                                </a>
+                                                <div class="modal fade" id="borrarUsuario{{user.id}}" tabindex="-1" role="dialog" aria-labelledby="borrarUsuarioTitle" aria-hidden="true">
+                                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title">
+                                                                    Borrar Usuario
+                                                                </h5>
+                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                ¿Esta seguro de que desea borrar el usuario?
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="sumbit" class="btn btn-secondary" ng-click="$ctrl.deleteUser(user.id)" data-dismiss="modal">
+                                                                    Si
+                                                                </button>
+                                                                <button type="button" class="btn btn-primary" data-dismiss="modal">
+                                                                    No
+                                                                </button>
+                                                            </div>
+                                                         </div>
+                                                    </div>
+                                                </div>
                                                 
                                             </td>
                                              

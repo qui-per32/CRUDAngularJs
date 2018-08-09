@@ -155,9 +155,9 @@ export const EditPacienteComponent = {
         </div>
     </div>
     <div class="text-center">
-        <input type="submit" value="Enviar" class="btn btn-info btn-block rounded-2">
+        <button  ng-click="$ctrl.edit()" class="btn btn-info btn-block rounded-2">Enviar</button>
     </div>
-    </form>
+    </div>
 </div>
     `
 }

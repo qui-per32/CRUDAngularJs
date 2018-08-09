@@ -20,9 +20,9 @@ export const HomeComponent = {
                                 <button type="button" class="btn btn-sm btn-primary"><a ui-sref="create" class="nav-link text-white">Nuevo usuario</a></button>
                             </div>
                             <div class="col-2">
-                                <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#borrarMedicos"><a  class="nav-link text-white">Borrar médicos</a></button>
+                                <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#borrarMedico"><a  class="nav-link text-white">Borrar médicos</a></button>
                             </div>
-                            <div class="modal fade" id="borrarMedicos" tabindex="-1" role="dialog" aria-labelledby="borrarMedicosTitle" aria-hidden="true">
+                            <div class="modal" id="borrarMedico" tabindex="-1" role="dialog" aria-labelledby="borrarMedicosTitle" aria-hidden="true">
                                                     <div class="modal-dialog modal-dialog-centered" role="document">
                                                         <div class="modal-content">
                                                             <div class="modal-header">
@@ -37,7 +37,7 @@ export const HomeComponent = {
                                                                 ¿Esta seguro de que desea borrar Todos los Medicos?
                                                             </div>
                                                             <div class="modal-footer">
-                                                                <button type="sumbit" class="btn btn-secondary">
+                                                                <button type="sumbit" class="btn btn-secondary" ng-click="$ctrl.deleteMedic()" data-dismiss="modal" >
                                                                     Si
                                                                 </button>
                                                                 <button type="button" class="btn btn-primary" data-dismiss="modal">
@@ -88,7 +88,7 @@ export const HomeComponent = {
                                                 <a href="#" data-toggle="modal" data-target="#borrarUsuario{{user.id}}">
                                                     <i class="fa fa-trash"></i>
                                                 </a>
-                                                <div class="modal fade" id="borrarUsuario{{user.id}}" tabindex="-1" role="dialog" aria-labelledby="borrarUsuarioTitle" aria-hidden="true">
+                                                <div class="modal " id="borrarUsuario{{user.id}}" tabindex="-1" role="dialog"  aria-hidden="true">
                                                     <div class="modal-dialog modal-dialog-centered" role="document">
                                                         <div class="modal-content">
                                                             <div class="modal-header">

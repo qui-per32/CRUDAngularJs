@@ -20,6 +20,12 @@ class EditPacienteController {
 
             });
     }
+
+    edit() {
+
+
+        this.dataService.edit(this.dataResult)
+    }
 }
 
 export default EditPacienteController;

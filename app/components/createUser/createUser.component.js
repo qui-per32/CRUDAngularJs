@@ -1,4 +1,10 @@
+import controller from './createUser.controller';
+
 export const CreateUserComponent = {
+    bindings: {
+            newUser: '<'
+        },
+        controller,
     template: ` 
 <div class="container-fluid">
     <div class="row header">
@@ -15,7 +21,7 @@ export const CreateUserComponent = {
             </div>
         </div>
     </div>
-    <form action="/save" method="post" class="needsValidation" novalidate>
+    <div class="needsValidation" novalidate>
     <div class="card card-default newUser">
         <div class="card-header">
             <h4 class="card-title">
@@ -27,7 +33,7 @@ export const CreateUserComponent = {
                 <div class="col-md-3 col-lg-3">
                     <div class="form-group">
                         <label class="control-label">Nombre *</label>
-                        <input type="text" class="form-control" name="nombre" required>
+                        <input type="text" class="form-control" ng-model="$ctrl.newUser.nombre" required>
                         <div class="invalid-feedback">
                                 Por favor rellene el campo con tu Nombre
                             </div>
@@ -36,7 +42,7 @@ export const CreateUserComponent = {
                 <div class="col-3">
                     <div class="form-group">
                         <label class="control-label">Primer Apellido *</label>
-                        <input type="text" class="form-control" name="primerApellido" required>
+                        <input type="text" class="form-control" ng-model="$ctrl.newUser.primerApellido" required>
                         <div class="invalid-feedback">
                                 Por favor rellene el campo con tu Primer Apellido
                         </div>
@@ -45,7 +51,7 @@ export const CreateUserComponent = {
                 <div class="col-3">
                     <div class="form-group">
                         <label class="control-label">Segundo Apellido</label>
-                        <input class="form-control" type="text" name="segundoApellido">
+                        <input class="form-control" type="text" ng-model="$ctrl.newUser.segundoApellido">
                     </div>
                 </div>
 
@@ -53,7 +59,7 @@ export const CreateUserComponent = {
                     <div class="form-group">
                         <label class="control-label">Fecha de Nacimiento</label>
                         <div class="input-group date" data-provide="datepicker">
-                            <input class="form-control" type="text" name="fechaNacimiento">
+                            <input class="form-control" type="text" ng-model="$ctrl.newUser.fechaNacimiento">
                             <span class="input-group-append">
                                 <button class="btn btn-outline-secondary" type="button">
                                     <i class="fa fa-calendar"></i>
@@ -68,7 +74,7 @@ export const CreateUserComponent = {
                 <div class="col-4">
                     <div class="form-group">
                         <label class="control-label">NHC(número de historia clínica) *</label>
-                        <input type="text" class="form-control" name="nhc" required>
+                        <input type="text" class="form-control" ng-model="$ctrl.newUser.nhc" required>
                         <div class="invalid-feedback">
                                 Por favor rellene el campo con tu NHC
                         </div>
@@ -77,14 +83,14 @@ export const CreateUserComponent = {
                 <div class="col-4">
                     <div class="form-group">
                         <label class="control-label">NIF o Pasaporte</label>
-                        <input type="text" class="form-control" name="nifoPasaporte">
+                        <input type="text" class="form-control" ng-model="$ctrl.newUser.nifoPasaporte">
                     </div>
                 </div>
 
                 <div class="col-4">
                     <div class="form-group">
                         <label class="control-label">Genero</label>
-                        <input type="text" class="form-control" name="genero">
+                        <input type="text" class="form-control" ng-model="$ctrl.newUser.genero">
                     </div>
                 </div>
             </div>
@@ -102,32 +108,32 @@ export const CreateUserComponent = {
                 <div class="col-3">
                     <div class="form-group">
                         <label class="control-label">Calle</label>
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" ng-model="$ctrl.newUser.calle">
                     </div>
                 </div>
                 <div class="col-2">
                     <div class="form-group">
                         <label class="control-label">Numero</label>
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" ng-model="$ctrl.newUser.numero">
                     </div>
                 </div>
                 <div class="col-2">
                     <div class="form-group">
                         <label class="control-label">Puerta</label>
-                        <input class="form-control" type="text">
+                        <input class="form-control" type="text" ng-model="$ctrl.dataResult.puerta">
                     </div>
                 </div>
 
                 <div class="col-2">
                     <div class="form-group">
                         <label class="control-label">Código Postal</label>
-                        <input class="form-control" type="text">
+                        <input class="form-control" type="text" ng-model="$ctrl.dataResult.codigoPostal">
                     </div>
                 </div>
                 <div class="col-3">
                     <div class="form-group">
                         <label class="control-label">Ciudad</label>
-                        <input class="form-control" type="text">
+                        <input class="form-control" type="text" ng-model="$ctrl.dataResult.ciudad">
                     </div>
                 </div>
             </div>
@@ -144,28 +150,28 @@ export const CreateUserComponent = {
                 <div class="col-4">
                     <div class="form-group">
                         <label class="control-label">Nombre aseguradora</label>
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" ng-model="$ctrl.dataResult.nombreAseguradora">
                     </div>
                 </div>
                 <div class="col-4">
                     <div class="form-group">
                         <label class="control-label">Tipo de seguro(salud,familiar,dental...)</label>
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" ng-model="$ctrl.dataResult.tipoSeguro">
                     </div>
                 </div>
                 <div class="col-4">
                     <div class="form-group">
                         <label class="control-label">Numero de la tarjeta</label>
-                        <input class="form-control" type="text">
+                        <input class="form-control" type="text" ng-model="$ctrl.newUser.numeroTarjeta">
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="text-center">
-        <input type="submit" value="Enviar" class="btn btn-info btn-block rounded-2">
+        <button ng-click="$ctrl.createNewUser()" class="btn btn-info btn-block rounded-2">Enviar</button>
     </div>
-    </form>
+    </div>
 </div>
     `
 }

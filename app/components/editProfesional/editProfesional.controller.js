@@ -13,9 +13,15 @@ class EditProfesionalController {
             .then(resultado => {
 
                 this.dataResult = resultado.filter(item => item.id == +id)[0];
-                console.log(this.dataResult);
+                
 
             });
+    }
+
+    edit(){
+        
+        
+        this.dataService.edit(this.dataResult)
     }
 }
 

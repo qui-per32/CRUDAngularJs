@@ -44,3 +44,14 @@ margin-bottom: 50px;
 .editHeader {
     margin-top: 30px;
 }
+
+.alignHeader {
+    text-align: right;
+}
+
+@media (max-width:575px) {
+    .alignHeader {
+        text-align: left;
+    }
+    
+}

@@ -13,9 +13,7 @@ class EditProfesionalController {
             });
     }
 
-    edit(){
-        
-        
+    edit(){   
         this.dataService.edit(this.editDataProfesional)
     }
 }

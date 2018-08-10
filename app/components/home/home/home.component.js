@@ -11,11 +11,12 @@ export const HomeComponent = {
         <div class="col-sm-12 col-md-12 col-xl-12">
             <div class="row titleCard listCard d-flex justify-content-center">
                 <div class="col-sm-8 col-md-8 col-xl-8">
-                    <div class="col-md-6 col-xl-6">
-                        <h4>Usuarios</h4>
+                    <div class="row align-items-center">
+                    <div class="col-sm-6 col-md-6 col-xl-6">
+                        <h4><u>Usuarios</u></h4>
 
                     </div>
-                    <div class="col-md-6 col-xl-6">
+                    <div class="col-sm-6 col-md-6 col-xl-6 alignHeader">
                         <div class="btn-group-vertical" role="group" aria-label="Basic example">
                             <button type="button" class="btn btn-sm btn-primary" ui-sref="create">Nuevo Usuario</button>
                             <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#borrarMedico">Borrar Medicos</button>
@@ -46,7 +47,7 @@ export const HomeComponent = {
                             </div>
                         </div>
                     </div>
-
+                    </div>
                     <table class="table table-hover border titleCard">
                         <thead class="bg-light">
                             <tr>

@@ -7,14 +7,9 @@ class PacientesController {
     }
 
     getId(id) {
-        console.log(id);
-        
         this.dataService.getData()
-            .then(resultado => {
-               
+            .then(resultado => {         
                 this.dataPacientes = resultado.filter(item => item.id == id)[0];
-                console.log(this.dataPacientes);
-                
             });
     }
 }

@@ -7,14 +7,9 @@ class EditProfesionalController {
     }
 
     getId(id) {
-        console.log(id);
-
-        this.dataService.getData()
+      this.dataService.getData()
             .then(resultado => {
-
                 this.editDataProfesional = resultado.filter(item => item.id == id)[0];
-                
-
             });
     }
 

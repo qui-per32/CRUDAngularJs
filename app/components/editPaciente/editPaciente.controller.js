@@ -9,20 +9,14 @@ class EditPacienteController {
     }
 
     getId(id) {
-        console.log(id);
 
         this.dataService.getData()
             .then(resultado => {
-
                 this.editDataPacientes = resultado.filter(item => item.id == id)[0];
-                console.log(this.editDataPacientes);
-
             });
     }
 
     edit() {
-
-
         this.dataService.edit(this.editDataPacientes);
     }
 }

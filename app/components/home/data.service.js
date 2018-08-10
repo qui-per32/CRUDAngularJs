@@ -6,12 +6,8 @@ export default class dataService {
         
     }
     loadData(){
-        console.log("entro load");
-        
-        this.data = JSON.parse(localStorage.getItem('users'))
-        if (!this.data) {
-            console.log("entro en data load");
-            
+     this.data = JSON.parse(localStorage.getItem('users'))
+        if (!this.data) {   
             this.loadInitialData();
         }
     }
@@ -19,12 +15,9 @@ export default class dataService {
         localStorage.setItem('users', JSON.stringify(this.data))
     }
     loadInitialData(){
-        console.log("entro");
-        
+              
         return this.$http.get('/json/usuarios.json')
-            .then(response => {
-                console.log(response);
-                
+            .then(response => {                
                 this.data = response.data;
                 this.saveData(this.data)
             })
@@ -40,15 +33,12 @@ export default class dataService {
                 this.data.splice(i, 1);
             }
             
-        }
-        
+        }    
         this.saveData();
     }
 
     deleteMedic() {
-        console.log(this.data);
-
-        var profesiones = "medico";
+        let profesiones = "medico";
         for (var i = this.data.length - 1; i >= 0; i--) {
             if (this.data[i].tipoProfesional === profesiones) {
                 this.data.splice(i, 1)
@@ -59,24 +49,17 @@ export default class dataService {
     }
 
     edit(user) {
-        console.log(user);
-
-        for (let i = 0; i < this.data.length; i++) {
+            for (let i = 0; i < this.data.length; i++) {
             if (this.data[i].id === user.id) {
                 this.data[i] = user;
             }
         }
         this.saveData();
-
-
-
     }
 
     newUser(datos){
-        console.log(datos);
-        datos.id = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+            datos.id = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
         this.data.push(datos);
-
         this.saveData();
     }
 }

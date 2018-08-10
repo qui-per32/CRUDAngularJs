@@ -13,10 +13,7 @@ class HomeController {
     }
 
     deleteUser(id) {
-        console.log(id);
-
         this.dataService.deleteUser(id);
-        
         let modal = $('#borrarUsuario' + id);
         modal.modal('hide')
     }

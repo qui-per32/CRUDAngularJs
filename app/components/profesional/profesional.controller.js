@@ -7,14 +7,9 @@ class ProfesionalController {
     }
 
     getId(id) {
-        console.log(id);
-
         this.dataService.getData()
             .then(resultado => {
-
                 this.dataProfesional = resultado.filter(item => item.id == +id)[0];
-                console.log(this.dataResult);
-
             });
     }
 }

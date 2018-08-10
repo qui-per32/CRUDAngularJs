@@ -1,7 +1,7 @@
 [{
     "id": 0,
     "tipo": "paciente",
-    "NHC": "132432423",
+    "nhc": "132432423",
     "nombre": "maria",
     "primerApellido": "perez",
     "segundoApellido": "gonzalez",
@@ -15,11 +15,11 @@
     "ciudad": "Valencia",
     "nombreAseguradora": "mafre",
     "tipoSeguro": "familiar",
-    "NumeroTarjeta": "2332324234"
+    "numeroTarjeta": "2332324234"
 }, {
     "id": 1,
     "tipo": "paciente",
-    "NHC": "132432423",
+    "nhc": "132432423",
     "nombre": "pedro",
     "primerApellido": "martinez",
     "segundoApellido": "sanchez",
@@ -33,11 +33,11 @@
     "ciudad": "Valencia",
     "nombreAseguradora": "mafre",
     "tipoSeguro": "familiar",
-    "NumeroTarjeta": "2332324234"
+    "numeroTarjeta": "2332324234"
 }, {
     "id": 2,
     "tipo": "paciente",
-    "NHC": "132432423",
+    "nhc": "132432423",
     "nombre": "edu",
     "primerApellido": "gomez",
     "segundoApellido": "alcover",
@@ -51,11 +51,11 @@
     "ciudad": "Valencia",
     "nombreAseguradora": "mafre",
     "tipoSeguro": "familiar",
-    "NumeroTarjeta": "2332324234"
+    "numeroTarjeta": "2332324234"
 }, {
     "id": 3,
     "tipo": "paciente",
-    "NHC": "132432423",
+    "nhc": "132432423",
     "nombre": "natasha",
     "primerApellido": "lopez",
     "segundoApellido": "zarate",
@@ -69,11 +69,11 @@
     "ciudad": "Valencia",
     "nombreAseguradora": "mafre",
     "tipoSeguro": "familiar",
-    "NumeroTarjeta": "2332324234"
+    "numeroTarjeta": "2332324234"
 }, {
     "id": 4,
     "tipo": "paciente",
-    "NHC": "132432423",
+    "nhc": "132432423",
     "nombre": "patrick",
     "primerApellido": "martinez",
     "segundoApellido": "priego",
@@ -87,11 +87,11 @@
     "ciudad": "Madrid",
     "nombreAseguradora": "maphre",
     "tipoSeguro": "familiar",
-    "NumeroTarjeta": "234234244665859"
+    "numeroTarjeta": "234234244665859"
 }, {
     "id": 5,
     "tipo": "paciente",
-    "NHC": "132432423",
+    "nhc": "132432423",
     "nombre": "danik",
     "primerApellido": "ruiz",
     "segundoApellido": "solate",
@@ -105,11 +105,11 @@
     "ciudad": "Valencia",
     "nombreAseguradora": "mafre",
     "tipoSeguro": "familiar",
-    "NumeroTarjeta": "2332324234"
+    "numeroTarjeta": "2332324234"
 }, {
     "id": 6,
     "tipo": "paciente",
-    "NHC": "132432423",
+    "nhc": "132432423",
     "nombre": "natasha",
     "primerApellido": "lopez",
     "segundoApellido": "zarate",
@@ -123,11 +123,11 @@
     "ciudad": "Valencia",
     "nombreAseguradora": "mafre",
     "tipoSeguro": "familiar",
-    "NumeroTarjeta": "2332324234"
+    "numeroTarjeta": "2332324234"
 }, {
     "id": 7,
     "tipo": "paciente",
-    "NHC": "132432423",
+    "nhc": "132432423",
     "nombre": "natasha",
     "primerApellido": "lopez",
     "segundoApellido": "zarate",
@@ -141,11 +141,11 @@
     "ciudad": "Valencia",
     "nombreAseguradora": "mafre",
     "tipoSeguro": "familiar",
-    "NumeroTarjeta": "2332324234"
+    "numeroTarjeta": "2332324234"
 }, {
     "id": 8,
     "tipo": "paciente",
-    "NHC": "132432423",
+    "nhc": "132432423",
     "nombre": "natasha",
     "primerApellido": "lopez",
     "segundoApellido": "zarate",
@@ -159,11 +159,11 @@
     "ciudad": "Valencia",
     "nombreAseguradora": "mafre",
     "tipoSeguro": "familiar",
-    "NumeroTarjeta": "2332324234"
+    "numeroTarjeta": "2332324234"
 }, {
     "id": 9,
     "tipo": "paciente",
-    "NHC": "132432423",
+    "nhc": "132432423",
     "nombre": "natasha",
     "primerApellido": "lopez",
     "segundoApellido": "zarate",
@@ -177,11 +177,11 @@
     "ciudad": "Valencia",
     "nombreAseguradora": "mafre",
     "tipoSeguro": "familiar",
-    "NumeroTarjeta": "2332324234"
+    "numeroTarjeta": "2332324234"
 }, {
     "id": 10,
     "tipo": "paciente",
-    "NHC": "132432423",
+    "nhc": "132432423",
     "nombre": "natasha",
     "primerApellido": "lopez",
     "segundoApellido": "zarate",
@@ -195,11 +195,11 @@
     "ciudad": "Valencia",
     "nombreAseguradora": "mafre",
     "tipoSeguro": "familiar",
-    "NumeroTarjeta": "2332324234"
+    "numeroTarjeta": "2332324234"
 }, {
     "id": 11,
     "tipo": "paciente",
-    "NHC": "132432423",
+    "nhc": "132432423",
     "nombre": "natasha",
     "primerApellido": "lopez",
     "segundoApellido": "zarate",
@@ -213,11 +213,11 @@
     "ciudad": "Valencia",
     "nombreAseguradora": "mafre",
     "tipoSeguro": "familiar",
-    "NumeroTarjeta": "2332324234"
+    "numeroTarjeta": "2332324234"
 }, {
     "id": 12,
     "tipo": "paciente",
-    "NHC": "132432423",
+    "nhc": "132432423",
     "nombre": "natasha",
     "primerApellido": "lopez",
     "segundoApellido": "zarate",
@@ -231,11 +231,11 @@
     "ciudad": "Valencia",
     "nombreAseguradora": "mafre",
     "tipoSeguro": "familiar",
-    "NumeroTarjeta": "2332324234"
+    "numeroTarjeta": "2332324234"
 }, {
     "id": 13,
     "tipo": "paciente",
-    "NHC": "132432423",
+    "nhc": "132432423",
     "nombre": "natasha",
     "primerApellido": "lopez",
     "segundoApellido": "zarate",
@@ -249,11 +249,11 @@
     "ciudad": "Valencia",
     "nombreAseguradora": "mafre",
     "tipoSeguro": "familiar",
-    "NumeroTarjeta": "2332324234"
+    "numeroTarjeta": "2332324234"
 }, {
     "id": 14,
     "tipo": "paciente",
-    "NHC": "132432423",
+    "nhc": "132432423",
     "nombre": "natasha",
     "primerApellido": "lopez",
     "segundoApellido": "zarate",
@@ -267,7 +267,7 @@
     "ciudad": "Valencia",
     "nombreAseguradora": "mafre",
     "tipoSeguro": "familiar",
-    "NumeroTarjeta": "2332324234"
+    "numeroTarjeta": "2332324234"
 },{
     "id": 15,
     "tipo": "profesional",

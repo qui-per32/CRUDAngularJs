@@ -2,11 +2,16 @@ export default class dataService {
     constructor($http) {
         this.$http = $http;
         this.loadData();
-
+        
+        
     }
     loadData(){
+        console.log("entro load");
+        
         this.data = JSON.parse(localStorage.getItem('users'))
-        if (typeof this.data === 'undefined') {
+        if (!this.data) {
+            console.log("entro en data load");
+            
             this.loadInitialData();
         }
     }
@@ -14,10 +19,14 @@ export default class dataService {
         localStorage.setItem('users', JSON.stringify(this.data))
     }
     loadInitialData(){
+        console.log("entro");
+        
         return this.$http.get('/json/usuarios.json')
             .then(response => {
+                console.log(response);
+                
                 this.data = response.data;
-                this.saveData()
+                this.saveData(this.data)
             })
     }
     getData() {

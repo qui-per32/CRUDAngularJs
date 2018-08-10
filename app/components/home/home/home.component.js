@@ -7,27 +7,29 @@ export const HomeComponent = {
        controller,
     template: ` 
     <div class="container-fluid bodyApp">
-   
         <div class="row">
-            <div class="col-12">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class=" offset-2 col-8 d-flex justify-content-between">
+            <div class="col-sm-12 col-md-12 col-xl-12">
+                        <div class="row titleCard listCard d-flex justify-content-center">
+                            <div class="col-sm-8 col-md-8 col-xl-8">
+                            <div class="row justify-content-between">
+                            <div class="col-md-6 col-xl-6">
                                 <h4>Usuarios</h4>
-                                <div class="btn-group" role="group" aria-label="Basic example">
-                                    <button type="button" class="btn btn-sm btn-primary" ui-sref="create">Nuevo Usuario</button>
-                                    <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#borrarMedico">Borrar Medicos</button>
-                                    <div class="modal" id="borrarMedico" tabindex="-1" role="dialog" aria-labelledby="borrarMedicosTitle" aria-hidden="true">
-                                        <div class="modal-dialog modal-dialog-centered" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title">
-                                                        Borrar Medicos
-                                                    </h5>
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                        <span aria-hidden="true">&times;</span>
-                                                    </button>
+                                
+                            </div>
+                            <div class="col-md-6 col-xl-6">
+                            <div class="btn-group-vertical" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-sm btn-primary" ui-sref="create">Nuevo Usuario</button>
+                                <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#borrarMedico">Borrar Medicos</button>
+                                <div class="modal" id="borrarMedico" tabindex="-1" role="dialog" aria-labelledby="borrarMedicosTitle" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title">
+                                                    Borrar Medicos
+                                                </h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
                                                 </div>
                                                 <div class="modal-body">
                                                     ¿Esta seguro de que desea borrar Todos los Medicos?
@@ -42,16 +44,11 @@ export const HomeComponent = {
                                                 </div>
                                             </div>
                                         </div>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-5 offset-2">
-                                
                             </div>
-                        <div class="row justify-content-center titleCard listCard">
-                            <div class="col-8">
-                                <table class="table table-hover border">
+                                <table class="table table-hover border titleCard">
                                     <thead class="bg-light">
                                         <tr>
                                             <th>
@@ -116,8 +113,6 @@ export const HomeComponent = {
                                 </table>
                             </div>
                         </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>

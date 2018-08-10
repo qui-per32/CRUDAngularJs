@@ -51,6 +51,10 @@ export const ProfesionalComponent = {
             <ul class="list-group">
               <li class="list-group-item">{{$ctrl.dataProfesional.nifoPasaporte}}</li>
             </ul>
+            <h5 class="card-title titleCard"><u>Tipo de Profesional</u></h5>
+            <ul class="list-group">
+              <li class="list-group-item">{{$ctrl.dataProfesional.tipoProfesional}}</li>
+            </ul>
           </div>
           <div class="tab-pane fade p-3" id="two" role="tabpanel" aria-labelledby="two-tab">
             <h5 class="card-title"><u>Calle</u></h5>

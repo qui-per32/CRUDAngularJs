@@ -6,18 +6,23 @@ export default class dataService {
     }
     loadData(){
         this.data = JSON.parse(localStorage.getItem('users'))
+        if (typeof this.data === 'undefined') {
+            this.loadInitialData();
+        }
     }
     saveData(){
         localStorage.setItem('users', JSON.stringify(this.data))
     }
-
+    loadInitialData(){
+        return this.$http.get('/json/usuarios.json')
+            .then(response => {
+                this.data = response.data;
+                this.saveData()
+            })
+    }
     getData() {
         return Promise.resolve(this.data);
-        // return this.$http.get('/json/usuarios.json')
-        //     .then(response => {
-        //         this.data = response.data;
-        //         return this.data;
-        //     })
+        
     }
 
     deleteUser(id) {

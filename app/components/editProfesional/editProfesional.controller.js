@@ -12,7 +12,7 @@ class EditProfesionalController {
         this.dataService.getData()
             .then(resultado => {
 
-                this.dataResult = resultado.filter(item => item.id == +id)[0];
+                this.editDataProfesional = resultado.filter(item => item.id == id)[0];
                 
 
             });
@@ -21,7 +21,7 @@ class EditProfesionalController {
     edit(){
         
         
-        this.dataService.edit(this.dataResult)
+        this.dataService.edit(this.editDataProfesional)
     }
 }
 

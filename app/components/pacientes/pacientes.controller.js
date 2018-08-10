@@ -12,8 +12,8 @@ class PacientesController {
         this.dataService.getData()
             .then(resultado => {
                
-                this.dataResult = resultado.filter(item => item.id == +id)[0];
-                console.log(this.dataResult);
+                this.dataPacientes = resultado.filter(item => item.id == id)[0];
+                console.log(this.dataPacientes);
                 
             });
     }

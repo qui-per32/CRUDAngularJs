@@ -8,7 +8,7 @@ class HomeController {
     getData() {
         this.dataService.getData()
             .then(resultado => {
-                this.dataResult = resultado;
+                this.data = resultado;
             });
     }
 

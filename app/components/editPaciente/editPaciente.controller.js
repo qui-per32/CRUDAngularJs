@@ -5,7 +5,6 @@ class EditPacienteController {
         let path = $location.$$path.split('/')
 
         this.dataService = dataService;
-        this.users = dataService.getData();        
         this.getId(path[path.length - 1]);
     }
 
@@ -15,8 +14,8 @@ class EditPacienteController {
         this.dataService.getData()
             .then(resultado => {
 
-                this.dataResult = resultado.filter(item => item.id == +id)[0];
-                console.log(this.dataResult);
+                this.editDataPacientes = resultado.filter(item => item.id == id)[0];
+                console.log(this.editDataPacientes);
 
             });
     }
@@ -24,7 +23,7 @@ class EditPacienteController {
     edit() {
 
 
-        this.dataService.edit(this.dataResult)
+        this.dataService.edit(this.editDataPacientes);
     }
 }
 

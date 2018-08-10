@@ -2,7 +2,7 @@ import controller from './home.controller'
 
 export const HomeComponent = {
    bindings: {
-           dataResult: '<'
+           data: '<'
        },
        controller,
     template: ` 
@@ -13,61 +13,58 @@ export const HomeComponent = {
                 <div class="card">
                     <div class="card-body">
                         <div class="row">
-                            <div class=" offset-2 col-2 border-right">
+                            <div class=" offset-2 col-8 d-flex justify-content-between">
                                 <h4>Usuarios</h4>
-                            </div>
-                            <div class="col-2">
-                                <button type="button" class="btn btn-sm btn-primary"><a ui-sref="create" class="nav-link text-white">Nuevo usuario</a></button>
-                            </div>
-                            <div class="col-2">
-                                <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#borrarMedico"><a  class="nav-link text-white">Borrar médicos</a></button>
-                            </div>
-                            <div class="modal" id="borrarMedico" tabindex="-1" role="dialog" aria-labelledby="borrarMedicosTitle" aria-hidden="true">
-                                                    <div class="modal-dialog modal-dialog-centered" role="document">
-                                                        <div class="modal-content">
-                                                            <div class="modal-header">
-                                                                <h5 class="modal-title">
-                                                                    Borrar Medicos
-                                                                </h5>
-                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                                    <span aria-hidden="true">&times;</span>
-                                                                </button>
-                                                            </div>
-                                                            <div class="modal-body">
-                                                                ¿Esta seguro de que desea borrar Todos los Medicos?
-                                                            </div>
-                                                            <div class="modal-footer">
-                                                                <button type="sumbit" class="btn btn-secondary" ng-click="$ctrl.deleteMedic()" data-dismiss="modal" >
-                                                                    Si
-                                                                </button>
-                                                                <button type="button" class="btn btn-primary" data-dismiss="modal">
-                                                                    No
-                                                                </button>
-                                                            </div>
-                                                         </div>
-                                                    </div>
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                    <button type="button" class="btn btn-sm btn-primary" ui-sref="create">Nuevo Usuario</button>
+                                    <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#borrarMedico">Borrar Medicos</button>
+                                    <div class="modal" id="borrarMedico" tabindex="-1" role="dialog" aria-labelledby="borrarMedicosTitle" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title">
+                                                        Borrar Medicos
+                                                    </h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
                                                 </div>
-                        </div>
-                        <div class="row justify-content-center titleCard">
+                                                <div class="modal-body">
+                                                    ¿Esta seguro de que desea borrar Todos los Medicos?
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="sumbit" class="btn btn-secondary" ng-click="$ctrl.deleteMedic()" data-dismiss="modal" >
+                                                        Si
+                                                    </button>
+                                                    <button type="button" class="btn btn-primary" data-dismiss="modal">
+                                                        No
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-5 offset-2">
+                                
+                            </div>
+                        <div class="row justify-content-center titleCard listCard">
                             <div class="col-8">
-                                <table class="table table-hover">
+                                <table class="table table-hover border">
                                     <thead class="bg-light">
                                         <tr>
                                             <th>
-                                            
+                                            ID
                                             </th>
                                             <th>Nombre</th>
                                             <th>Editar</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr ng-repeat="user in $ctrl.dataResult">
+                                        <tr ng-repeat="user in $ctrl.data">
                                             <td>
-                                                <div class="form-check-inline">
-                                                    <label class="form-check-label">
-                                                        <input type="checkbox" class="form-check-input" value="">
-                                                    </label>
-                                                </div>
+                                                <p>{{user.id}}</p>
                                             </td>
                                             <td>
                                                 <p>{{user.nombre + ','+ user.primerApellido }}</p>
@@ -112,11 +109,8 @@ export const HomeComponent = {
                                                             </div>
                                                          </div>
                                                     </div>
-                                                </div>
-                                                
+                                                </div>                                        
                                             </td>
-                                             
-
                                         </tr>
                                     </tbody>
                                 </table>

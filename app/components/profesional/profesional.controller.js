@@ -12,7 +12,7 @@ class ProfesionalController {
         this.dataService.getData()
             .then(resultado => {
 
-                this.dataResult = resultado.filter(item => item.id == +id)[0];
+                this.dataProfesional = resultado.filter(item => item.id == +id)[0];
                 console.log(this.dataResult);
 
             });

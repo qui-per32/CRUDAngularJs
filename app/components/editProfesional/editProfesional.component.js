@@ -2,13 +2,13 @@ import controller from '../editProfesional/editProfesional.controller';
 
 export const EditProfesionalComponent = {
     bindings: {
-        dataResult: '<'
+        editDataProfesional: '<'
     },
     controller,
     template: ` 
     <div class="container-fluid">
-    <div  class="needsValidation" novalidate>
-    <div class="card card-default newUser header">
+    <div class="needsValidation" novalidate>
+    <div class="card card-default newUser editHeader">
         <div class="card-header">
             <h4 class="card-title">
                 <b>Datos Personales</b>
@@ -16,36 +16,36 @@ export const EditProfesionalComponent = {
         </div>
         <div class="card-body">
             <div class="row">
-                <div class="col-md-3 col-lg-3">
+                <div class="col-sm-4 col-md-3">
                     <div class="form-group">
                         <label class="control-label">Nombre *</label>
-                        <input type="text" class="form-control" ng-model="$ctrl.dataResult.nombre" name="nombre" required>
+                        <input type="text" class="form-control" ng-model="$ctrl.editDataProfesional.nombre" required>
                         <div class="invalid-feedback">
                                 Por favor rellene el campo con tu Nombre
                             </div>
                     </div>
                 </div>
-                <div class="col-3">
+                <div class="col-sm-4 col-md-3">
                     <div class="form-group">
                         <label class="control-label">Primer Apellido *</label>
-                        <input type="text" class="form-control" name="primerApellido" ng-model="$ctrl.dataResult.primerApellido" required>
+                        <input type="text" class="form-control" ng-model="$ctrl.editDataProfesional.primerApellido" required>
                         <div class="invalid-feedback">
                                 Por favor rellene el campo con tu Primer Apellido
                         </div>
                     </div>
                 </div>
-                <div class="col-3">
+                <div class="col-sm-4 col-md-3">
                     <div class="form-group">
                         <label class="control-label">Segundo Apellido</label>
-                        <input class="form-control" type="text" name="segundoApellido" ng-model="$ctrl.dataResult.segundoApellido">
+                        <input class="form-control" type="text" ng-model="$ctrl.editDataProfesional.segundoApellido">
                     </div>
                 </div>
 
-                <div class="col-3">
+                <div class="col-sm-4 col-md-3">
                     <div class="form-group">
                         <label class="control-label">Fecha de Nacimiento</label>
-                        <div class="input-group date" data-provide="datepicker">
-                            <input class="form-control" type="text" name="fechaNacimiento" ng-model="$ctrl.dataResult.fechaNacimiento">
+                        <div class="input-group date" editDataProfesional-provide="datepicker">
+                            <input class="form-control" type="text" ng-model="$ctrl.editDataProfesional.fechaNacimiento">
                             <span class="input-group-append">
                                 <button class="btn btn-outline-secondary" type="button">
                                     <i class="fa fa-calendar"></i>
@@ -57,34 +57,34 @@ export const EditProfesionalComponent = {
             </div>
 
             <div class="row">
-                <div class="col-3">
+                <div class="col-sm-4 col-md-3">
                     <div class="form-group">
                         <label class="control-label">Numero de Colegiado *</label>
-                        <input type="text" class="form-control" name="numeroColegiado" ng-model="$ctrl.dataResult.numeroColegiado" required>
+                        <input type="text" class="form-control" ng-model="$ctrl.editDataProfesional.numeroColegiado" required>
                         <div class="invalid-feedback">
                                 Por favor rellene el campo con tu numero de colegiado
                         </div>
                     </div>
                 </div>
-                <div class="col-3">
+                <div class="col-sm-4 col-md-3">
                     <div class="form-group">
                         <label class="control-label">NIF o Pasaporte</label>
-                        <input type="text" class="form-control" name="nifoPasaporte" ng-model="$ctrl.dataResult.nifoPasaporte">
+                        <input type="text" class="form-control" ng-model="$ctrl.editDataProfesional.nifoPasaporte">
                     </div>
                 </div>
 
-                <div class="col-3">
+                <div class="col-sm-4 col-md-3">
                     <div class="form-group">
                         <label class="control-label">Genero</label>
-                        <input type="text" class="form-control" name="genero" ng-model="$ctrl.dataResult.genero">
+                        <input type="text" class="form-control" ng-model="$ctrl.editDataProfesional.genero">
                     </div>
                 </div>
-                <div class="col-3">
+                <div class="col-sm-4 col-md-3">
                         <div class="form-group">
                             <label for="inputState">
                                 Tipo de Profesional
                             </label>
-                            <select id="tipoProfesional" class="form-control" name="tipoProfesionnal" ng-model="$ctrl.dataResult.tipoProfesional">
+                            <select id="tipoProfesional" class="form-control" ng-model="$ctrl.editDataProfesional.tipoProfesional">
                                 <option value="medico">Medico</option>
                                 <option value="enfermero">Enfermero</option>
                                 <option value="administrativo">Administrativo</option>
@@ -103,42 +103,42 @@ export const EditProfesionalComponent = {
         </div>
         <div class="card-body">
             <div class="row">
-                <div class="col-3">
+                <div class="col-sm-4 col-md-4">
                     <div class="form-group">
                         <label class="control-label">Calle</label>
-                        <input type="text" class="form-control" name="calle" ng-model="$ctrl.dataResult.calle">
+                        <input type="text" class="form-control" ng-model="$ctrl.editDataProfesional.calle">
                     </div>
                 </div>
-                <div class="col-2">
+                <div class="col-sm-4 col-md-1">
                     <div class="form-group">
                         <label class="control-label">Numero</label>
-                        <input type="text" class="form-control" name="numero" ng-model="$ctrl.dataResult.numero">
+                        <input type="text" class="form-control" ng-model="$ctrl.editDataProfesional.numero">
                     </div>
                 </div>
-                <div class="col-2">
+                <div class="col-sm-4 col-md-1">
                     <div class="form-group">
                         <label class="control-label">Puerta</label>
-                        <input class="form-control" type="text" name="puerta" ng-model="$ctrl.dataResult.puerta">
+                        <input class="form-control" type="text" ng-model="$ctrl.editDataProfesional.puerta">
                     </div>
                 </div>
 
-                <div class="col-2">
+                <div class="col-sm-4 col-md-2">
                     <div class="form-group">
                         <label class="control-label">Código Postal</label>
-                        <input class="form-control" type="text" name="codigoPostal" ng-model="$ctrl.dataResult.codigoPostal">
+                        <input class="form-control" type="text" ng-model="$ctrl.editDataProfesional.codigoPostal">
                     </div>
                 </div>
-                <div class="col-3">
+                <div class="col-sm-4 col-md-4">
                     <div class="form-group">
                         <label class="control-label">Ciudad</label>
-                        <input class="form-control" type="text" name="ciudad" ng-model="$ctrl.dataResult.ciudad">
+                        <input class="form-control" type="text" ng-model="$ctrl.editDataProfesional.ciudad">
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="text-center">
-        <button ng-click="$ctrl.save()"  class="btn btn-info btn-block rounded-2">Enviar</button>
+    <div class="text-center newUser">
+        <button ui-sref="home" ng-click="$ctrl.save()"  class="btn btn-info btn-block rounded-2">Enviar</button>
     </div>
     </div>
 </div>

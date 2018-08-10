@@ -60,7 +60,7 @@ export default class dataService {
 
     newUser(datos){
         console.log(datos);
-        datos.id = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(2, 10);
+        datos.id = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
         this.data.push(datos);
 
         this.saveData();

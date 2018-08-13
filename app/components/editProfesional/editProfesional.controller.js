@@ -1,6 +1,8 @@
 class EditProfesionalController {
-    constructor(dataService, $location) {
-        let path = $location.$$path.split('/')
+    constructor(dataService, $location,$state) {
+
+        this.state = $state;        
+        let path = $location.$$path.split('/');
 
         this.dataService = dataService;
         this.getId(path[path.length - 1]);
@@ -14,13 +16,13 @@ class EditProfesionalController {
     }
 
      edit(form) {
-     if (form.nombre.$invalid === true || form.primerApellido.$invalid === true || form.numeroColegiado.$invalid == true) {
-         console.log(form.nombre.$invalid);
-         console.log(form.primerApellido.$invalid);
-         console.log(form.numerocolegiado.$invalid);
-         return;
-     }
-        this.dataService.edit(this.editDataProfesional)
+         if(form.$invalid === true) {
+             return
+         } else {
+            this.dataService.edit(this.editDataProfesional);
+            this.state.go('home');
+         }
+
     }
 }
 

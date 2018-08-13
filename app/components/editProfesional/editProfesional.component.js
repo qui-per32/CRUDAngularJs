@@ -20,8 +20,8 @@ export const EditProfesionalComponent = {
                     <div class="form-group">
                         <label class="control-label">Nombre *</label>
                         <input type="text" class="form-control" name="nombre" ng-model="$ctrl.editDataProfesional.nombre" required>
-                        <div class="invalid-feedback">
-                                Por favor rellene el campo con tu Nombre
+                        <div ng-show="form.$submitted">
+                                <div ng-show="form.nombre.$error.required">Por favor rellene el campo con tu Nombre</div>
                             </div>
                     </div>
                 </div>
@@ -29,8 +29,8 @@ export const EditProfesionalComponent = {
                     <div class="form-group">
                         <label class="control-label">Primer Apellido *</label>
                         <input type="text" class="form-control" name="primerApellido" ng-model="$ctrl.editDataProfesional.primerApellido" required>
-                        <div class="invalid-feedback">
-                                Por favor rellene el campo con tu Primer Apellido
+                        <div ng-show="form.$submitted">
+                                <div ng-show="form.primerApellido.$error.required">Por favor rellene el campo con tu Primer Apellido</div>
                         </div>
                     </div>
                 </div>
@@ -61,8 +61,8 @@ export const EditProfesionalComponent = {
                     <div class="form-group">
                         <label class="control-label">Numero de Colegiado *</label>
                         <input type="text" class="form-control" name="numeroColegiado" ng-model="$ctrl.editDataProfesional.numeroColegiado" required>
-                        <div class="invalid-feedback">
-                                Por favor rellene el campo con tu numero de colegiado
+                        <div ng-show="form.$submitted">
+                                <div ng-show="form.numeroColegiado.$error.required">Por favor rellene el campo con tu numero de colegiado</div>
                         </div>
                     </div>
                 </div>

@@ -59,7 +59,7 @@ export const HomeComponent = {
                             </tr>
                         </thead>
                         <tbody>
-                            <tr ng-repeat="user in $ctrl.data">
+                            <tr ng-repeat="user in $ctrl.data track by user.id">
                                 <td>
                                     <p>{{user.id}}</p>
                                 </td>

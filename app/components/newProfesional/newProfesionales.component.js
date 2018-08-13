@@ -34,8 +34,8 @@ export const newProfesionalescomponent = {
                         <div class="form-group">
                             <label class="control-label">Nombre *</label>
                             <input type="text" class="form-control" name="nombre" ng-model="$ctrl.newUser.nombre" required>
-                            <div class="invalid-feedback">
-                                Por favor rellene el campo con tu Nombre
+                            <div ng-show="form.$submitted">
+                                <div ng-show="form.nombre.$error.required">Por favor rellene el campo con tu Nombre</div>
                             </div>
                         </div>
                     </div>
@@ -43,8 +43,8 @@ export const newProfesionalescomponent = {
                         <div class="form-group">
                             <label class="control-label">Primer Apellido *</label>
                             <input type="text" class="form-control" name="primerApellido" ng-model="$ctrl.newUser.primerApellido" required>
-                            <div class="invalid-feedback">
-                                Por favor rellene el campo con tu Primer Apellido
+                            <div ng-show="form.$submitted">
+                                <div ng-show="form.primerApellido.$error.required">Por favor rellene el campo con tu Primer Apellido</div>
                             </div>
                         </div>
                     </div>
@@ -81,8 +81,8 @@ export const newProfesionalescomponent = {
                         <div class="form-group">
                             <label class="control-label">Numero colegiado *</label>
                             <input type="text" class="form-control" name="numeroColegiado" ng-model="$ctrl.newUser.numeroColegiado" required>
-                            <div class="invalid-feedback">
-                                Por favor rellene el campo con tu Numero de colegiado
+                            <div ng-show="form.$submitted">
+                                <div ng-show="form.numeroColegiado.$error.required">Por favor rellene el campo con tu Numero de colegiado</div>
                             </div>
                         </div>
                     </div>

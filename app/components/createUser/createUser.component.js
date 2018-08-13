@@ -35,8 +35,8 @@ export const CreateUserComponent = {
                     <div class="form-group">
                         <label class="control-label">Nombre *</label>
                         <input type="text" class="form-control" ng-model="$ctrl.newUser.nombre" name="nombre" required>
-                        <div class="invalid-feedback">
-                                Por favor rellene el campo con tu Nombre
+                        <div ng-show="form.$submitted">
+                                <div ng-show="form.nombre.$error.required">Por favor rellene el campo con tu Nombre</div>
                             </div>
                     </div>
                 </div>
@@ -44,8 +44,8 @@ export const CreateUserComponent = {
                     <div class="form-group">
                         <label class="control-label">Primer Apellido *</label>
                         <input type="text" class="form-control" name="primerApellido" ng-model="$ctrl.newUser.primerApellido" required>
-                        <div class="invalid-feedback">
-                                Por favor rellene el campo con tu Primer Apellido
+                        <div ng-show="form.$submitted">
+                                <div ng-show="form.primerApellido.$error.required">Por favor rellene el campo con tu Primer Apellido</div>
                         </div>
                     </div>
                 </div>
@@ -76,8 +76,8 @@ export const CreateUserComponent = {
                     <div class="form-group">
                         <label class="control-label">NHC(número de historia clínica) *</label>
                         <input type="text" class="form-control" name="nhc" ng-model="$ctrl.newUser.nhc" required>
-                        <div class="invalid-feedback">
-                                Por favor rellene el campo con tu NHC
+                        <div ng-show="form.$submitted">
+                               <div ng-show="form.nhc.$error.required"> Por favor rellene el campo con tu NHC </div>
                         </div>
                     </div>
                 </div>

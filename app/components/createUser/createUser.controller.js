@@ -1,22 +1,24 @@
 class CreateUserController {
-    constructor(dataService) {
+    constructor(dataService, $state) {
+        this.state = $state
         this.dataService = dataService;
         this.newUser = [];
     }
 
     createNewUser(form) {
         console.log(form);
-               
-      if (form.nombre.$invalid === true || form.primerApellido.$invalid === true || form.nhc.$invalid == true) {
-          console.log(form.nombre.$invalid);
-          console.log(form.primerApellido.$invalid);
-          console.log(form.nhc.$invalid);
-          return;
-          
-      }
+        
+        if(form.$invalid === true) {
+            return
+        } else {
+
+            this.newUser.tipo = 'paciente';
+            this.dataService.newUser(this.newUser);
+            this.state.go('home');
+        }
+        
       
-        this.newUser.tipo = 'paciente';
-        this.dataService.newUser(this.newUser);
+        
 
     }
 }

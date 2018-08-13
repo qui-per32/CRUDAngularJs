@@ -12,7 +12,7 @@ export const newProfesionalescomponent = {
             <div class="card card-default cardHeader newUser">
                 <div class="card-header">
                     <h4 class="card-title">
-                    <b>Profesionales</b>
+                        <b>Profesionales</b>
                     </h4>
                     <button type="button" class="btn btn-sm btn-primary btn-block">
                         <a ui-sref="create" class="nav-link text-white">Pacientes</a>
@@ -21,19 +21,19 @@ export const newProfesionalescomponent = {
             </div>
         </div>
     </div>
-    <div class="needsValidation" novalidate>
-    <div class="card card-default newUser">
-        <div class="card-header">
-            <h4 class="card-title">
-                <b>Datos Personales</b>
-            </h4>
-        </div>
+    <form name="form" class="needsValidation" ng-submit="$ctrl.createNewUser(form)" novalidate>
+        <div class="card card-default newUser">
+            <div class="card-header">
+                <h4 class="card-title">
+                    <b>Datos Personales</b>
+                </h4>
+            </div>
             <div class="card-body">
                 <div class="row">
                     <div class="col-sm-4 col-md-3">
                         <div class="form-group">
                             <label class="control-label">Nombre *</label>
-                            <input type="text" class="form-control" ng-model="$ctrl.newUser.nombre" required>
+                            <input type="text" class="form-control" name="nombre" ng-model="$ctrl.newUser.nombre" required>
                             <div class="invalid-feedback">
                                 Por favor rellene el campo con tu Nombre
                             </div>
@@ -42,7 +42,7 @@ export const newProfesionalescomponent = {
                     <div class="col-sm-4 col-md-3">
                         <div class="form-group">
                             <label class="control-label">Primer Apellido *</label>
-                            <input type="text" class="form-control" ng-model="$ctrl.newUser.primerApellido" required>
+                            <input type="text" class="form-control" name="primerApellido" ng-model="$ctrl.newUser.primerApellido" required>
                             <div class="invalid-feedback">
                                 Por favor rellene el campo con tu Primer Apellido
                             </div>
@@ -80,7 +80,7 @@ export const newProfesionalescomponent = {
                     <div class="col-sm-4 col-md-3">
                         <div class="form-group">
                             <label class="control-label">Numero colegiado *</label>
-                            <input type="text" class="form-control"ng-model="$ctrl.newUser.numeroColegiado" required>
+                            <input type="text" class="form-control" name="numeroColegiado" ng-model="$ctrl.newUser.numeroColegiado" required>
                             <div class="invalid-feedback">
                                 Por favor rellene el campo con tu Numero de colegiado
                             </div>
@@ -107,14 +107,14 @@ export const newProfesionalescomponent = {
                     </div>
                 </div>
             </div>
-    </div>
-
-    <div class="card card-default newUser">
-        <div class="card-header">
-            <h4 class="card-title">
-                <b>Dirección</b>
-            </h4>
         </div>
+
+        <div class="card card-default newUser">
+            <div class="card-header">
+                <h4 class="card-title">
+                    <b>Dirección</b>
+                </h4>
+            </div>
             <div class="card-body">
                 <div class="row">
                     <div class="col-sm-4 col-md-4">
@@ -139,22 +139,22 @@ export const newProfesionalescomponent = {
                     <div class="col-sm-4 col-md-2">
                         <div class="form-group">
                             <label class="control-label">Código Postal</label>
-                                <input class="form-control" type="text" ng-model="$ctrl.newUser.codigoPostal">
+                            <input class="form-control" type="text" ng-model="$ctrl.newUser.codigoPostal">
                         </div>
                     </div>
                     <div class="col-sm-4 col-md-4">
                         <div class="form-group">
                             <label class="control-label">Ciudad</label>
-                                <input class="form-control" type="text" ng-model="$ctrl.newUser.ciudad">
+                            <input class="form-control" type="text" ng-model="$ctrl.newUser.ciudad">
                         </div>
                     </div>
                 </div>
             </div>
-    </div>
-    <div class="text-center newUser">
-        <button ui-sref="home" ng-click="$ctrl.createNewUser()" class="btn btn-info btn-block rounded-2">Enviar</button>
-    </div>
-    </div>
+        </div>
+        <div class="text-center newUser">
+            <button type="submit" class="btn btn-info btn-block rounded-2">Enviar</button>
+        </div>
+    </form>
 </div>
     `
 }

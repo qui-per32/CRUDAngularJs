@@ -7,7 +7,7 @@ export const EditProfesionalComponent = {
     controller,
     template: ` 
     <div class="container-fluid">
-    <div class="needsValidation" novalidate>
+    <form class="needsValidation" ng-submit="$ctrl.edit(form)" novalidate>
     <div class="card card-default newUser editHeader">
         <div class="card-header">
             <h4 class="card-title">
@@ -19,7 +19,7 @@ export const EditProfesionalComponent = {
                 <div class="col-sm-4 col-md-3">
                     <div class="form-group">
                         <label class="control-label">Nombre *</label>
-                        <input type="text" class="form-control" ng-model="$ctrl.editDataProfesional.nombre" required>
+                        <input type="text" class="form-control" name="nombre" ng-model="$ctrl.editDataProfesional.nombre" required>
                         <div class="invalid-feedback">
                                 Por favor rellene el campo con tu Nombre
                             </div>
@@ -28,7 +28,7 @@ export const EditProfesionalComponent = {
                 <div class="col-sm-4 col-md-3">
                     <div class="form-group">
                         <label class="control-label">Primer Apellido *</label>
-                        <input type="text" class="form-control" ng-model="$ctrl.editDataProfesional.primerApellido" required>
+                        <input type="text" class="form-control" name="primerApellido" ng-model="$ctrl.editDataProfesional.primerApellido" required>
                         <div class="invalid-feedback">
                                 Por favor rellene el campo con tu Primer Apellido
                         </div>
@@ -60,7 +60,7 @@ export const EditProfesionalComponent = {
                 <div class="col-sm-4 col-md-3">
                     <div class="form-group">
                         <label class="control-label">Numero de Colegiado *</label>
-                        <input type="text" class="form-control" ng-model="$ctrl.editDataProfesional.numeroColegiado" required>
+                        <input type="text" class="form-control" name="numeroColegiado" ng-model="$ctrl.editDataProfesional.numeroColegiado" required>
                         <div class="invalid-feedback">
                                 Por favor rellene el campo con tu numero de colegiado
                         </div>
@@ -138,7 +138,7 @@ export const EditProfesionalComponent = {
         </div>
     </div>
     <div class="text-center newUser">
-        <button ui-sref="home" ng-click="$ctrl.save()"  class="btn btn-info btn-block rounded-2">Enviar</button>
+        <button type="submit" ui-sref="home"  class="btn btn-info btn-block rounded-2">Enviar</button>
     </div>
     </div>
 </div>

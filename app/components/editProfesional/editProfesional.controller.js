@@ -13,7 +13,13 @@ class EditProfesionalController {
             });
     }
 
-    edit(){   
+     edit(form) {
+     if (form.nombre.$invalid === true || form.primerApellido.$invalid === true || form.numeroColegiado.$invalid == true) {
+         console.log(form.nombre.$invalid);
+         console.log(form.primerApellido.$invalid);
+         console.log(form.numerocolegiado.$invalid);
+         return;
+     }
         this.dataService.edit(this.editDataProfesional)
     }
 }

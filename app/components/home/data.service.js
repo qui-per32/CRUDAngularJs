@@ -58,7 +58,7 @@ export default class dataService {
     }
 
     newUser(datos){
-            datos.id = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+        datos.id = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
         this.data.push(datos);
         this.saveData();
     }

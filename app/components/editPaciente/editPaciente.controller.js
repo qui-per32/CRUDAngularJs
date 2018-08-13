@@ -1,11 +1,12 @@
 class EditPacienteController {
     constructor(dataService, $location) {
-        
-        
+
+
         let path = $location.$$path.split('/')
 
         this.dataService = dataService;
         this.getId(path[path.length - 1]);
+        this.editDataPacientes = [];
     }
 
     getId(id) {
@@ -16,7 +17,18 @@ class EditPacienteController {
             });
     }
 
-    edit() {
+    edit(form) {
+        console.log("hola");
+
+        console.log(form);
+
+        if (form.nombre.$invalid === true || form.primerApellido.$invalid === true || form.nhc.$invalid == true) {
+            console.log(form.nombre.$invalid);
+            console.log(form.primerApellido.$invalid);
+            console.log(form.nhc.$invalid);
+            return;
+
+        }
         this.dataService.edit(this.editDataPacientes);
     }
 }

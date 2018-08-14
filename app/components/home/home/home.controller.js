@@ -1,6 +1,7 @@
 class HomeController {
     constructor(dataService) {
-
+        
+        
         this.dataService = dataService;
         this.getData();
     }

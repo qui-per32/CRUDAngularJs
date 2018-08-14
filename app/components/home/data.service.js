@@ -6,24 +6,27 @@ export default class dataService {
         
     }
     loadData(){
-     this.data = JSON.parse(localStorage.getItem('users'))
-        if (!this.data) {   
-            this.loadInitialData();
-        }
+         this.data = JSON.parse(localStorage.getItem('users')) 
     }
     saveData(){
         localStorage.setItem('users', JSON.stringify(this.data))
     }
-    loadInitialData(){
-              
+    loadInitialData(){       
         return this.$http.get('/json/usuarios.json')
-            .then(response => {                
+            .then(response => {
                 this.data = response.data;
-                this.saveData(this.data)
+                this.saveData();
+                return this.data;
             })
     }
     getData() {
-        return Promise.resolve(this.data);
+        if (!this.data) {
+            return this.loadInitialData();
+        } else {
+
+            return Promise.resolve(this.data);
+        }
+        
         
     }
 

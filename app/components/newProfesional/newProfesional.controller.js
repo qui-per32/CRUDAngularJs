@@ -2,7 +2,7 @@ class NewProfesionalController {
     constructor(dataService,$state) {
         this.state = $state;
         this.dataService = dataService;
-        this.newUser = [];
+        // this.newUser = [];
     }
 
     createNewUser(form) {

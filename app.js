@@ -341,7 +341,7 @@ var dataService = function () {
         value: function loadInitialData() {
             var _this = this;
 
-            return this.$http.get('/json/usuarios.json').then(function (response) {
+            return this.$http.get('usuarios.json').then(function (response) {
                 _this.data = response.data;
                 _this.saveData();
                 return _this.data;

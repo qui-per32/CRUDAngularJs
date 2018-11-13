@@ -409,7 +409,7 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 var ErrorComponent = exports.ErrorComponent = {
-    template: "\n<div class=\"home container-fluid\">\n        <div class=\"row text-center\">\n            <div class=\"col-12\">\n                <h1>\n                    ERROR\n                </h1>\n            </div>\n            <div class=\"col-12\">\n                <div class=\"card borderNone\">\n                    <div class=\"card-body\">\n                        <p>\n                            404 not Found\n                        </p>\n                        <a href=\"http://127.0.0.1:3000/#!/\" class=\"badge badge-primary\">Primary</a>\n                    </div>\n                </div>\n            </div>\n        </div>\n\n    </div>\n    "
+    template: "\n<div class=\"home container-fluid\">\n        <div class=\"row text-center\">\n            <div class=\"col-12\">\n                <h1>\n                    ERROR\n                </h1>\n            </div>\n            <div class=\"col-12\">\n                <div class=\"card borderNone\">\n                    <div class=\"card-body\">\n                        <p>\n                            404 not Found\n                        </p>\n                        <a ui-sref=\"home\" class=\"badge badge-primary\">Primary</a>\n                    </div>\n                </div>\n            </div>\n        </div>\n\n    </div>\n    "
 };
 
 },{}],15:[function(require,module,exports){

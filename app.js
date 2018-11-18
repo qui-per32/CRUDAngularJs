@@ -319,10 +319,10 @@ var _createClass = function () { function defineProperties(target, props) { for 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var dataService = function () {
-    function dataService($https) {
+    function dataService($http) {
         _classCallCheck(this, dataService);
 
-        this.$https = $https;
+        this.$http = $http;
         this.loadData();
     }
 
@@ -341,7 +341,7 @@ var dataService = function () {
         value: function loadInitialData() {
             var _this = this;
 
-            return this.$https.get('./usuarios.json').then(function (response) {
+            return this.$http.get('/usuarios.json').then(function (response) {
                 _this.data = response.data;
                 _this.saveData();
                 return _this.data;

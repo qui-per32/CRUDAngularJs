@@ -13,7 +13,7 @@ export const ErrorComponent = {
                         <p>
                             404 not Found
                         </p>
-                        <a href="http://127.0.0.1:3000/#!/" class="badge badge-primary">Primary</a>
+                        <a ui-sref="home" class="badge badge-primary">Primary</a>
                     </div>
                 </div>
             </div>

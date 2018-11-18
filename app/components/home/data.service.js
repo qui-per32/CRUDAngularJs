@@ -12,7 +12,7 @@ export default class dataService {
         localStorage.setItem('users', JSON.stringify(this.data))
     }
     loadInitialData(){       
-        return this.$http.get('/json/usuarios.json')
+        return this.$http.get('/usuarios.json')
             .then(response => {
                 this.data = response.data;
                 this.saveData();
